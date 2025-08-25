@@ -1,0 +1,396 @@
+/* 关于我页面专用样式 */
+
+.about-main {
+    padding-top: 80px;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* 页面标题区域 */
+.page-header {
+    padding: 60px 0;
+    text-align: center;
+    background: white;
+    margin-bottom: 0;
+}
+
+.page-title {
+    font-size: 3rem;
+    color: #2c3e50;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.title-divider {
+    width: 60px;
+    height: 3px;
+    background: #3498db;
+    margin: 0 auto 20px;
+    border-radius: 2px;
+}
+
+.page-subtitle {
+    font-size: 1.1rem;
+    color: #7f8c8d;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* 关于我内容区域 */
+.about-content {
+    padding: 60px 0;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-card {
+    background: white;
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    height: fit-content;
+}
+
+.about-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+}
+
+.about-card h2 {
+    color: #2c3e50;
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+    font-weight: 500;
+    border-bottom: 2px solid #ecf0f1;
+    padding-bottom: 15px;
+}
+
+/* 主要介绍卡片 */
+.main-intro {
+    grid-row: span 2;
+}
+
+.tags-section {
+    margin-bottom: 30px;
+}
+
+.tag-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tag {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    color: white;
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.intro-text {
+    line-height: 1.8;
+    color: #666;
+}
+
+.intro-text p {
+    margin-bottom: 20px;
+}
+
+.intro-text p:last-child {
+    margin-bottom: 0;
+}
+
+.highlight-link {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.highlight-link:hover {
+    color: #2980b9;
+    text-decoration: underline;
+}
+
+/* 技能卡片 */
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.skill-item {
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    background: #f8f9fa;
+    transition: all 0.3s ease;
+}
+
+.skill-item:hover {
+    background: #e9ecef;
+    transform: translateY(-3px);
+}
+
+.skill-icon {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.skill-item h3 {
+    color: #2c3e50;
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+}
+
+.skill-item p {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* 教育经历 */
+.timeline-education {
+    position: relative;
+}
+
+.timeline-education::before {
+    content: '';
+    position: absolute;
+    left: 80px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #3498db;
+}
+
+.edu-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.edu-item::before {
+    content: '';
+    position: absolute;
+    left: 74px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 14px;
+    height: 14px;
+    background: #3498db;
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.edu-year {
+    width: 70px;
+    font-weight: 500;
+    color: #3498db;
+    font-size: 0.9rem;
+}
+
+.edu-content {
+    margin-left: 30px;
+}
+
+.edu-content h3 {
+    color: #2c3e50;
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+}
+
+.edu-content p {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+/* 工作经历 */
+.work-item {
+    margin-bottom: 25px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #ecf0f1;
+}
+
+.work-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.work-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.work-header h3 {
+    color: #2c3e50;
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.work-period {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    background: #ecf0f1;
+    padding: 4px 12px;
+    border-radius: 15px;
+}
+
+.work-title {
+    color: #3498db;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.work-desc {
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* 项目展示 */
+.project-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.project-item {
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.project-item:hover {
+    background: #e9ecef;
+    transform: translateY(-2px);
+}
+
+.project-item h3 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.project-item p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.project-link {
+    display: inline-block;
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 16px;
+    border: 2px solid #3498db;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.project-link:hover {
+    background: #3498db;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* 响应式设计 */
+@media (max-width: 1024px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .main-intro {
+        grid-row: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 2.5rem;
+    }
+    
+    .about-card {
+        padding: 30px 20px;
+    }
+    
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .timeline-education::before {
+        left: 60px;
+    }
+    
+    .edu-item::before {
+        left: 54px;
+    }
+    
+    .edu-year {
+        width: 50px;
+        font-size: 0.8rem;
+    }
+    
+    .edu-content {
+        margin-left: 20px;
+    }
+    
+    .work-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-title {
+        font-size: 2rem;
+    }
+    
+    .about-card {
+        padding: 20px 15px;
+    }
+    
+    .tag-group {
+        justify-content: center;
+    }
+    
+    .timeline-education::before {
+        display: none;
+    }
+    
+    .edu-item::before {
+        display: none;
+    }
+    
+    .edu-item {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+    
+    .edu-content {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}
+

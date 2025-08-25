@@ -1,0 +1,373 @@
+/* 周记页面专用样式 */
+
+.weekly-main {
+    padding-top: 80px;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+/* 页面标题区域 */
+.page-header {
+    padding: 60px 0;
+    text-align: center;
+    background: white;
+    margin-bottom: 0;
+}
+
+.page-title {
+    font-size: 3rem;
+    color: #2c3e50;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.title-divider {
+    width: 60px;
+    height: 3px;
+    background: #f39c12;
+    margin: 0 auto 20px;
+    border-radius: 2px;
+}
+
+.page-subtitle {
+    font-size: 1.1rem;
+    color: #7f8c8d;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* 筛选区域 */
+.filter-section {
+    padding: 40px 0;
+    background: white;
+    border-bottom: 1px solid #ecf0f1;
+}
+
+.filter-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.filter-tabs {
+    display: flex;
+    gap: 10px;
+}
+
+.filter-tab {
+    padding: 10px 20px;
+    border: 2px solid #ecf0f1;
+    background: white;
+    color: #7f8c8d;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.filter-tab.active,
+.filter-tab:hover {
+    background: #f39c12;
+    border-color: #f39c12;
+    color: white;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    background: white;
+    border: 2px solid #ecf0f1;
+    border-radius: 25px;
+    padding: 5px;
+    transition: border-color 0.3s ease;
+}
+
+.search-box:focus-within {
+    border-color: #f39c12;
+}
+
+#searchInput {
+    border: none;
+    outline: none;
+    padding: 8px 15px;
+    font-size: 14px;
+    background: transparent;
+    width: 250px;
+}
+
+.search-btn {
+    background: #f39c12;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    color: white;
+    transition: background 0.3s ease;
+}
+
+.search-btn:hover {
+    background: #e67e22;
+}
+
+/* 周记内容区域 */
+.weekly-content {
+    padding: 60px 0;
+}
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 30px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, #3498db, #27ae60);
+}
+
+/* 周记卡片 */
+.weekly-card {
+    position: relative;
+    margin-bottom: 40px;
+    margin-left: 70px;
+    opacity: 0;
+    transform: translateX(30px);
+    animation: slideInRight 0.6s ease forwards;
+}
+
+.weekly-card:nth-child(even) {
+    animation-delay: 0.1s;
+}
+
+.weekly-card:nth-child(odd) {
+    animation-delay: 0.2s;
+}
+
+.card-marker {
+    position: absolute;
+    left: -55px;
+    top: 20px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.grade-8b {
+    background: #3498db;
+}
+
+.grade-9a {
+    background: #27ae60;
+}
+
+.card-content {
+    background: white;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    border-left: 4px solid transparent;
+}
+
+.weekly-card[data-category="8b"] .card-content {
+    border-left-color: #3498db;
+}
+
+.weekly-card[data-category="9a"] .card-content {
+    border-left-color: #27ae60;
+}
+
+.card-content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.card-title {
+    color: #2c3e50;
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+.card-date {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    background: #ecf0f1;
+    padding: 4px 12px;
+    border-radius: 15px;
+}
+
+.card-preview {
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.card-preview p {
+    margin: 0;
+}
+
+.expand-btn {
+    background: linear-gradient(135deg, #f39c12, #e67e22);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.expand-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(243, 156, 18, 0.3);
+}
+
+.card-full-content {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #ecf0f1;
+    color: #666;
+    line-height: 1.8;
+}
+
+.card-full-content p {
+    margin-bottom: 15px;
+}
+
+.card-full-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* 动画效果 */
+@keyframes slideInRight {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* 搜索结果提示 */
+.search-result-tip {
+    margin: 40px 0;
+    animation: fadeInUp 0.5s ease;
+}
+
+.search-result-tip p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* 筛选动画 */
+.weekly-card.hidden {
+    display: none;
+}
+
+.weekly-card.show {
+    display: block;
+    animation: fadeInUp 0.5s ease;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 2.5rem;
+    }
+    
+    .filter-controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .filter-tabs {
+        justify-content: center;
+    }
+    
+    .search-box {
+        align-self: center;
+    }
+    
+    #searchInput {
+        width: 200px;
+    }
+    
+    .timeline::before {
+        left: 20px;
+    }
+    
+    .weekly-card {
+        margin-left: 50px;
+    }
+    
+    .card-marker {
+        left: -45px;
+    }
+    
+    .card-content {
+        padding: 20px;
+    }
+    
+    .card-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-title {
+        font-size: 2rem;
+    }
+    
+    .weekly-card {
+        margin-left: 30px;
+    }
+    
+    .card-marker {
+        left: -25px;
+        width: 12px;
+        height: 12px;
+    }
+    
+    .timeline::before {
+        left: 10px;
+    }
+    
+    .card-content {
+        padding: 15px;
+    }
+    
+    .card-title {
+        font-size: 1.1rem;
+    }
+}
+

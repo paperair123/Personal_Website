@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人博客 | 蒋尚衡</title>
+    <link rel="icon" href="assets/images/favicon.ico">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?3b5389c34cd542969350153c936d4f93";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <style>
+        .redirect-main {
+            padding-top: 80px;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #8e44ad 0%, #3498db 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .redirect-content {
+            text-align: center;
+            background: white;
+            padding: 60px 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+            max-width: 500px;
+            margin: 0 20px;
+        }
+        
+        .redirect-icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            color: #9b59b6;
+        }
+        
+        .redirect-title {
+            font-size: 2rem;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+        
+        .redirect-desc {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
+        
+        .redirect-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #9b59b6, #8e44ad);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            margin-bottom: 20px;
+        }
+        
+        .redirect-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(155, 89, 182, 0.3);
+        }
+        
+        .countdown {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            margin-top: 20px;
+        }
+        
+        .back-link {
+            display: inline-block;
+            color: #3498db;
+            text-decoration: none;
+            margin-top: 15px;
+            font-size: 0.95rem;
+        }
+        
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar no-copy-interaction-with-default-cursor">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="logo-circle"></div>
+                <span class="logo-name">Jiang Shawn</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link" data-color="green">首页</a>
+                <a href="about.html" class="nav-link" data-color="blue">关于</a>
+                <a href="weekly.html" class="nav-link" data-color="orange">周记</a>
+                <a href="blog.html" class="nav-link active" data-color="purple">博客</a>
+                <a href="contact.html" class="nav-link" data-color="cyan">联系</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主内容 -->
+    <main class="redirect-main no-copy-interaction-with-default-cursor">
+        <div class="redirect-content">
+            <div class="redirect-icon">📰</div>
+            <h1 class="redirect-title">个人博客</h1>
+            <p class="redirect-desc">
+                我的博客包含新闻观点、深度思考和学习心得。<br>
+                即将跳转到博客网站...
+            </p>
+            <a href="https://blog.jiangshawn.site" class="redirect-btn">立即访问博客</a>
+            <div class="countdown">
+                <span id="countdown">5</span> 秒后自动跳转
+            </div>
+            <a href="index.html" class="back-link">← 返回首页</a>
+        </div>
+    </main>
+
+    <script>
+        // 自动跳转倒计时
+        let countdown = 5;
+        const countdownElement = document.getElementById('countdown');
+        
+        const timer = setInterval(() => {
+            countdown--;
+            countdownElement.textContent = countdown;
+            
+            if (countdown <= 0) {
+                clearInterval(timer);
+                window.location.href = 'https://blog.jiangshawn.site';
+            }
+        }, 1000);
+        
+        // 点击任意位置取消自动跳转
+        document.addEventListener('click', (e) => {
+            if (e.target.classList.contains('redirect-btn')) return;
+            clearInterval(timer);
+            countdownElement.parentElement.textContent = '自动跳转已取消';
+        });
+    </script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
+

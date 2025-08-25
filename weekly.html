@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的周记 | 蒋尚衡</title>
+    <link rel="icon" href="assets/images/favicon.ico">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/weekly.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?3b5389c34cd542969350153c936d4f93";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar no-copy-interaction-with-default-cursor">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="logo-circle"></div>
+                <span class="logo-name">Jiang Shawn</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link" data-color="green">首页</a>
+                <a href="about.html" class="nav-link" data-color="blue">关于</a>
+                <a href="weekly.html" class="nav-link active" data-color="orange">周记</a>
+                <a href="blog.html" class="nav-link" data-color="purple">博客</a>
+                <a href="contact.html" class="nav-link" data-color="cyan">联系</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主内容 -->
+    <main class="weekly-main no-copy-interaction-with-default-cursor">
+        <!-- 页面标题 -->
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-title">我的周记</h1>
+                <div class="title-divider"></div>
+                <p class="page-subtitle">记录学习生活的点点滴滴，分享成长路上的思考与感悟</p>
+            </div>
+        </section>
+
+        <!-- 筛选和搜索 -->
+        <section class="filter-section">
+            <div class="container">
+                <div class="filter-controls">
+                    <div class="filter-tabs">
+                        <button class="filter-tab active" data-filter="all">全部</button>
+                        <button class="filter-tab" data-filter="8b">8年级</button>
+                        <button class="filter-tab" data-filter="9a">9年级</button>
+                    </div>
+                    <div class="search-box">
+                        <input type="text" id="searchInput" placeholder="搜索周记内容...">
+                        <button class="search-btn">🔍</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 周记列表 -->
+        <section class="weekly-content">
+            <div class="container">
+                <div class="timeline">
+                    <!-- 9年级周记 -->
+                    <div class="weekly-card" data-category="9a" data-date="2024-01-21">
+                        <div class="card-marker grade-9a"></div>
+                        <div class="card-content">
+                            <div class="card-header">
+                                <h3 class="card-title">9A20 - 2024年1月21日</h3>
+                                <span class="card-date">2024.01.21</span>
+                            </div>
+                            <div class="card-preview">
+                                <p>这一周的学习生活充实而有意义，在期末复习的紧张氛围中，我逐渐找到了适合自己的学习节奏...</p>
+                            </div>
+                            <button class="expand-btn" onclick="toggleCard(this)">展开阅读</button>
+                            <div class="card-full-content" style="display: none;">
+                                <p>这一周的学习生活充实而有意义，在期末复习的紧张氛围中，我逐渐找到了适合自己的学习节奏。各科老师都在进行最后的知识点梳理，我也在认真整理笔记，查漏补缺。</p>
+                                <p>数学方面，通过大量的练习题，我对函数和几何的理解更加深入了。语文的古诗词背诵也基本完成，现在主要是加强阅读理解的训练。英语单词的记忆需要继续坚持，每天的积累很重要。</p>
+                                <p>这周末和同学们一起讨论学习问题，互相帮助解决难题，这种合作学习的方式很有效果。希望在接下来的期末考试中能够发挥出自己的最佳水平。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="weekly-card" data-category="9a" data-date="2024-01-14">
+                        <div class="card-marker grade-9a"></div>
+                        <div class="card-content">
+                            <div class="card-header">
+                                <h3 class="card-title">9A19 - 2024年1月14日</h3>
+                                <span class="card-date">2024.01.14</span>
+                            </div>
+                            <div class="card-preview">
+                                <p>期末考试临近，复习进入了关键阶段。这周主要是系统性地回顾各科知识点...</p>
+                            </div>
+                            <button class="expand-btn" onclick="toggleCard(this)">展开阅读</button>
+                            <div class="card-full-content" style="display: none;">
+                                <p>期末考试临近，复习进入了关键阶段。这周主要是系统性地回顾各科知识点，制定了详细的复习计划。</p>
+                                <p>物理的力学部分需要多做实验题，化学的方程式配平还需要加强练习。历史和政治的知识点比较多，需要理解记忆相结合。</p>
+                                <p>虽然学习压力比较大，但是看到自己的进步还是很有成就感的。继续加油！</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="weekly-card" data-category="9a" data-date="2023-12-31">
+                        <div class="card-marker grade-9a"></div>
+                        <div class="card-content">
+                            <div class="card-header">
+                                <h3 class="card-title">9A17 - 2023年12月31日</h3>
+                                <span class="card-date">2023.12.31</span>
+                            </div>
+                            <div class="card-preview">
+                                <p>2023年的最后一周，回顾这一年的学习和成长，有很多感慨...</p>
+                            </div>
+                            <button class="expand-btn" onclick="toggleCard(this)">展开阅读</button>
+                            <div class="card-full-content" style="display: none;">
+                                <p>2023年的最后一周，回顾这一年的学习和成长，有很多感慨。从8年级到9年级，学习难度明显增加，但我也在不断适应和进步。</p>
+                                <p>这一年里，我学会了更好地管理时间，提高了学习效率。也结识了很多志同道合的朋友，我们一起努力，互相鼓励。</p>
+                                <p>新的一年即将到来，希望能够继续保持学习的热情，在各个方面都有更大的提升。2024年，加油！</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="weekly-card" data-category="9a" data-date="2023-09-10">
+                        <div class="card-marker grade-9a"></div>
+                        <div class="card-content">
+                            <div class="card-header">
+                                <h3 class="card-title">9A01 - 2023年9月10日</h3>
+                                <span class="card-date">2023.09.10</span>
+                            </div>
+                            <div class="card-preview">
+                                <p>既然有了自己的服务器，不用来整点花活都对不起它了。第一周，说实话，没什么有意思的事情...</p>
+                            </div>
+                            <button class="expand-btn" onclick="toggleCard(this)">展开阅读</button>
+                            <div class="card-full-content" style="display: none;">
+                                <p>既然有了自己的服务器，不用来整点花活都对不起它了。</p>
+                                <p>第一周，说实话，没什么有意思的事情，九年级压力固然大，好在我早有心理准备，所以没有特别不适应。</p>
+                                <p>周末有一些奇奇怪怪的事情，作业一直到周日凌晨才写完，不过以后可能还会这样了，虽然累大，但也不是不可以接受。</p>
+                                <p>......实在是想不出什么话说，下周再说，我现在要去早睡早起。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 8年级周记 -->
+                    <div class="weekly-card" data-category="8b" data-date="2023-06-11">
+                        <div class="card-marker grade-8b"></div>
+                        <div class="card-content">
+                            <div class="card-header">
+                                <h3 class="card-title">8B18 - 2023年6月11日</h3>
+                                <span class="card-date">2023.06.11</span>
+                            </div>
+                            <div class="card-preview">
+                                <p>8年级的最后几周，即将迎来期末考试。这一年的学习让我收获很多...</p>
+                            </div>
+                            <button class="expand-btn" onclick="toggleCard(this)">展开阅读</button>
+                            <div class="card-full-content" style="display: none;">
+                                <p>8年级的最后几周，即将迎来期末考试。这一年的学习让我收获很多，不仅是知识上的积累，更重要的是学习方法的改进。</p>
+                                <p>通过这一年的努力，我的各科成绩都有了明显的提升。特别是数学和物理，从刚开始的不适应到现在的游刃有余，这个过程让我很有成就感。</p>
+                                <p>即将升入9年级，面临更大的挑战，但我已经做好了准备。相信通过持续的努力，一定能够取得更好的成绩。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="weekly-card" data-category="8b" data-date="2023-03-04">
+                        <div class="card-marker grade-8b"></div>
+                        <div class="card-content">
+                            <div class="card-header">
+                                <h3 class="card-title">8B04 - 2023年3月4日</h3>
+                                <span class="card-date">2023.03.04</span>
+                            </div>
+                            <div class="card-preview">
+                                <p>新学期开始了，8年级下学期的学习任务更加繁重，但我充满了期待...</p>
+                            </div>
+                            <button class="expand-btn" onclick="toggleCard(this)">展开阅读</button>
+                            <div class="card-full-content" style="display: none;">
+                                <p>新学期开始了，8年级下学期的学习任务更加繁重，但我充满了期待。新增的物理课程特别有趣，实验让我对科学产生了更浓厚的兴趣。</p>
+                                <p>这学期我给自己制定了更详细的学习计划，希望能够在各个科目上都有所突破。特别是语文的写作能力，需要通过大量的阅读和练习来提升。</p>
+                                <p>新的开始，新的希望。相信通过努力，这个学期会有更大的收获。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer no-copy-interaction-with-default-cursor">
+        <div class="container">
+            <p>&copy; 2025 蒋尚衡 All Rights Reserved.</p>
+            <p><a href="https://beian.miit.gov.cn/" target="_blank">桂ICP备2023006462号</a></p>
+            <p></p><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=45020402000207">
+                        <img src="/assets/images/record_icon.png" alt="备案图标">
+                        桂公网安备 45020402000207号
+                    </a></p>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/weekly.js"></script>
+</body>
+</html>
+

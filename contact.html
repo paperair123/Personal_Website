@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>联系我 | 蒋尚衡</title>
+    <link rel="icon" href="assets/images/favicon.ico">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?3b5389c34cd542969350153c936d4f93";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <style>
+        .contact-main {
+            padding-top: 80px;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #1abc9c 0%, #16a085 100%);
+        }
+        
+        .page-header {
+            padding: 60px 0;
+            text-align: center;
+            background: white;
+            margin-bottom: 0;
+        }
+        
+        .page-title {
+            font-size: 3rem;
+            color: #2c3e50;
+            font-weight: 300;
+            margin-bottom: 20px;
+        }
+        
+        .title-divider {
+            width: 60px;
+            height: 3px;
+            background: #1abc9c;
+            margin: 0 auto 20px;
+            border-radius: 2px;
+        }
+        
+        .page-subtitle {
+            font-size: 1.1rem;
+            color: #7f8c8d;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        
+        .contact-content {
+            padding: 60px 0;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .contact-card {
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+        
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+        }
+        
+        .contact-card h2 {
+            color: #2c3e50;
+            margin-bottom: 25px;
+            font-size: 1.8rem;
+            font-weight: 500;
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 15px;
+        }
+        
+        .contact-methods {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-item:hover {
+            background: #e9ecef;
+            transform: translateX(5px);
+        }
+        
+        .contact-icon {
+            font-size: 1.5rem;
+            margin-right: 15px;
+            width: 40px;
+            text-align: center;
+        }
+        
+        .contact-info h3 {
+            color: #2c3e50;
+            margin-bottom: 5px;
+            font-size: 1.1rem;
+        }
+        
+        .contact-info p {
+            color: #666;
+            margin: 0;
+            font-size: 0.95rem;
+        }
+        
+        .contact-info a {
+            color: #1abc9c;
+            position: relative;
+            padding-bottom: 2px;
+            transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .contact-info a::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            width: 0;
+            height: 1.5px;
+            transition: 
+                width 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+                left 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+                opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            opacity: 0;
+        }
+
+        .contact-info a:hover::after,
+        .contact-info a:focus::after {
+            width: 100%;
+            left: 0; 
+            opacity: 1;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background: #1abc9c;
+            color: white;
+            border-radius: 50%;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+        
+        .social-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(26, 188, 156, 0.3);
+        }
+        
+        .message-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .form-group label {
+            color: #2c3e50;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            padding: 12px 15px;
+            border: 2px solid #ecf0f1;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: border-color 0.3s ease;
+            font-family: inherit;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #1abc9c;
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        .submit-btn {
+            background: linear-gradient(135deg, #1abc9c, #16a085);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(26, 188, 156, 0.3);
+        }
+        
+        .note {
+            background: #e8f8f5;
+            border-left: 4px solid #1abc9c;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+            color: #2c3e50;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+        
+        @media (max-width: 768px) {
+            .page-title {
+                font-size: 2.5rem;
+            }
+            
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .contact-card {
+                padding: 30px 20px;
+            }
+            
+            .social-links {
+                justify-content: center;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .page-title {
+                font-size: 2rem;
+            }
+            
+            .contact-card {
+                padding: 20px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar no-copy-interaction-with-default-cursor">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="logo-circle"></div>
+                <span class="logo-name">Jiang Shawn</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link" data-color="green">首页</a>
+                <a href="about.html" class="nav-link" data-color="blue">关于</a>
+                <a href="weekly.html" class="nav-link" data-color="orange">周记</a>
+                <a href="blog.html" class="nav-link" data-color="purple">博客</a>
+                <a href="contact.html" class="nav-link active" data-color="cyan">联系</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主内容 -->
+    <main class="contact-main">
+        <!-- 页面标题 -->
+        <section class="page-header  no-copy-interaction-with-default-cursor">
+            <div class="container">
+                <h1 class="page-title">联系我</h1>
+                <div class="title-divider"></div>
+                <p class="page-subtitle">欢迎与我交流，分享想法和建议</p>
+            </div>
+        </section>
+
+        <!-- 联系内容 -->
+        <section class="contact-content">
+            <div class="container">
+                <div class="contact-grid">
+                    <!-- 联系方式 -->
+                    <div class="contact-card">
+                        <h2 class=" no-copy-interaction-with-default-cursor">联系方式</h2>
+                        <div class="contact-methods">
+                            <div class="contact-item">
+                                <div class="contact-icon no-copy-interaction-with-default-cursor">📧</div>
+                                <div class="contact-info">
+                                    <h3 class=" no-copy-interaction-with-default-cursor">邮箱</h3>
+                                    <p><a href="mailto:2289893469@qq.com">2289893469@qq.com</a></p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon no-copy-interaction-with-default-cursor">💬</div>
+                                <div class="contact-info">
+                                    <h3 class=" no-copy-interaction-with-default-cursor">QQ</h3>
+                                    <p>2289893469</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon no-copy-interaction-with-default-cursor">🌐</div>
+                                <div class="contact-info">
+                                    <h3 class=" no-copy-interaction-with-default-cursor">个人博客</h3>
+                                    <p><a href="https://blog.jiangshawn.site" target="_blank">blog.jiangshawn.site</a></p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item no-copy-interaction-with-default-cursor">
+                                <div class="contact-icon">📱</div>
+                                <div class="contact-info">
+                                    <h3>社交媒体</h3>
+                                    <p>欢迎关注我的动态</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="social-links no-copy-interaction-with-default-cursor">
+                            <a href="#" class="social-link" title="微信">💬</a>
+                            <a href="#" class="social-link" title="微博">🐦</a>
+                            <a href="#" class="social-link" title="GitHub">💻</a>
+                            <a href="#" class="social-link" title="B站">📺</a>
+                        </div>
+                    </div>
+
+                    <!-- 留言表单 -->
+                    <div class="contact-card no-copy-interaction-with-default-cursor">
+                        <h2>发送消息</h2>
+                        <form class="message-form" onsubmit="handleSubmit(event)">
+                            <div class="form-group">
+                                <label for="name">姓名</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">邮箱</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject">主题</label>
+                                <input type="text" id="subject" name="subject" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">消息内容</label>
+                                <textarea id="message" name="message" placeholder="请输入您想说的话..." required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="submit-btn">发送消息</button>
+                        </form>
+                        
+                        <div class="note">
+                            <strong>提示：</strong>本站为静态网站，点击按钮后仅会唤起本地邮件发送功能，不会提交表单至服务器。
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer no-copy-interaction-with-default-cursor">
+        <div class="container">
+            <p>&copy; 2025 蒋尚衡 All Rights Reserved.</p>
+            <p><a href="https://beian.miit.gov.cn/" target="_blank">桂ICP备2023006462号</a></p>
+            <p></p><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=45020402000207">
+                        <img src="/assets/images/record_icon.png" alt="备案图标">
+                        桂公网安备 45020402000207号
+                    </a></p>
+        </div>
+    </footer>
+
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            
+            // 构建邮件链接
+            const mailtoLink = `mailto:2289893469@qq.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`姓名: ${name}\n邮箱: ${email}\n\n消息内容:\n${message}`)}`;
+            
+            // 打开邮件客户端
+            window.location.href = mailtoLink;
+            
+            // 显示提示
+            alert('正在打开邮件客户端，请完成发送。如果没有自动打开，请手动发送邮件到 2289893469@qq.com');
+        }
+    </script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
+
